@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+
+  <title>Presente da sorte</title>
+  <!-- biblioteca de confetes carregada via CDN-->
+  <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.9.4/dist/confetti.browser.min.js"></script>
+  
+  <style>
+  body {
+    background-color: #f4f4f9;
+    text-align: center;
+    margin: 0;
+    padding: 10px;
+  }
+
+  #caixa {
+    cursor: pointer;
+    display: inline-block;
+    transition: transform 0.3s;
+  }
+
+  #caixa:hover {
+    transform: scale(1.1);
+    animation: chacoalhar 0.3s infinite;
+  }
+
+  #pagina-gato {
+    display: none;
+  }
+
+  #gato {
+      animation: aparecer 1s;
+      max-width: 180px;
+      width: 100%;
+      height: auto;
+      margin: 0 auto;
+      display: block;
+  }
+
+  @keyframes aparecer {
+      from {
+          opacity: 0;
+          transform: scale(0.8);
+      }
+
+      to {
+          opacity: 1;
+          transform: scale(1);
+      }
+  }
+
+  button {
+    background-color: #c9a;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 8px;
+    font-size: 16px;
+    cursor: pointer;
+  }
+
+  button:hover {
+    background-color: #b88;
+  }
+
+  @keyframes chacoalhar {
+    0% {transform: scale(1.1) rotate(0deg);}
+    25% {transform: scale(1.1) rotate(-5deg);}
+    75% {transform: scale(1.1) rotate(5deg);}
+    100% {transform: scale(1.1) rotate(0deg);}
+  }
+  </style>
+</head>
+
+<body>
+
+  <div id="pagina-caixa">
+    <h1>Clique na caixa</h1>
+
+    <div id="caixa" onclick="abrir()">
+      <svg width="150" height="150" viewBox="0 0 150 150">
+        <rect x="20" y="60" width="110" height="80" fill="#c9a" stroke="black" stroke-width="2" />
+        <rect x="60" y="60" width="30" height="80" fill="#fc0" stroke="black" stroke-width="2" />
+        <rect x="20" y="40" width="110" height="25" fill="#c9a" stroke="black" stroke-width="2" />
+        <rect x="60" y="40" width="30" height="25" fill="#fc0" stroke="black" stroke-width="2" />
+        <circle cx="60" cy="35" r="12" fill="none" stroke="black" stroke-width="3" />
+        <circle cx="90" cy="35" r="12" fill="none" stroke="black" stroke-width="3" />
+      </svg>
+    </div>
+  </div>
+
+  <div id="pagina-gato">
+    <h1>Penélope da Sorte</h1>
+    <img id="gato" src="https://i.postimg.cc/T2WcXc6v/gato-natacao.png" alt="gato com óculos e touca de natação azul">
+    <p>Parabéns! Você recebeu a Penélope da sorte, agora você ganhou super respiração para seus treinos de natação!</p>
+
+    <button onclick="voltar()">Voltar</button>
+  </div>
+
+<script>
+  function abrir() {
+    document.getElementById("pagina-caixa").style.display = "none";
+    document.getElementById("pagina-gato").style.display = "block";
+    
+    confetti ({
+      particleCount: 100, 
+      spread: 70, 
+      origin: {y:0.6}
+    });
+  }
+
+  function voltar() {
+    document.getElementById("pagina-gato").style.display = "none";
+    document.getElementById("pagina-caixa").style.display = "block";
+  }
+</script>
+
+</body>
+</html>
