@@ -49,25 +49,6 @@ legend {
     padding: 0 5px;
 }
 
-label {
-    display: inline-block;
-    margin-bottom: 15px;
-}
-
-input:not([type="radio"]):not([type="checkbox"]):not([type="color"]),
-select,
-textarea {
-    width: 100%;
-    padding: 10px;
-    margin-bottom: 20px;
-    border: 1px solid #cccccc;
-    border-radius: 8px;
-}
-
-textarea {
-    min-height: 100px;
-}
-
 input[type="radio"],
 input[type="checkbox"] {
     width: auto;
@@ -80,6 +61,37 @@ input[type="color"] {
     height: 40px;
     padding: 0;
     margin-bottom: 20px;
+}
+
+/* :where() zera a especificidade do seletor dentro dele,
+   então regras mais específicas (como a do tel) sempre vencem */
+:where(input:not([type="radio"]):not([type="checkbox"]):not([type="color"])),
+select,
+textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #cccccc;
+    border-radius: 8px;
+}
+
+/* Agora funciona: sobrescreve apenas o margin-bottom */
+input[type="tel"] {
+    margin-bottom: 0;
+}
+
+small {
+    margin-bottom: 20px;
+    display: inline-block;
+}
+
+label {
+    display: inline-block;
+    margin-bottom: 15px;
+}
+
+textarea {
+    min-height: 100px;
 }
 
 input:focus,
@@ -101,7 +113,6 @@ textarea:user-valid {
     border-color: green;
 }
 
-
 button {
     width: 100px;
     height: 30px;
@@ -121,4 +132,3 @@ button[type="reset"]:hover {
     background-color: orangered;
     color: #ffffff;
 }
-
