@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <link rel="icon" href="img/favicon-penelope.png">
+    <link rel="stylesheet" href="style.css">
+
+    <meta name="description" content="Formulário de pesquisa sobre a Penélope">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fjalla+One&family=Work+Sans&display=swap" rel="stylesheet">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pesquisa Penélope</title>
+
+</head>
+<body>
+    <main>
+        <header>
+            <img src="img/favicon-penelope.png" alt="rosto da Penélope vetorizada">
+            <h1>Pesquisa Penélope</h1>
+        </header>
+
+        <section>
+            <form action="sucesso.html" method="post">
+                <fieldset>
+                    <!-- DADOS PESSOAIS  -->
+                    <legend>Dados Pessoais</legend>
+
+                    <label for="name">Nome</label>
+                    <input type="text" name="userName" id="name" required>
+                    <br>
+                    <label for="age">Idade</label>
+                    <input type="number" name="userAge" id="age" min="23" max="27" required>
+                    <br>
+                    <label for="age">Data de nascimento</label>
+                    <input type="date" name="userBirthDate" id="birthDate" required>
+                    <br>
+                    <label for="email">Email</label>
+                    <input type="email" name="userEmail" id="email" required>
+                    <br>
+                    <label for="phoneNumber">Telefone</label>
+                    <input type="tel" name="userPhoneNumber" id="phoneNumber" pattern="[0-9]{11}" placeholder="DDD + número sem espaço ou hífen" aria-describedby="phoneHelp">
+                    <small id="phoneHelp">Preencha com 11 dígitos no formato DDD + número sem espaço ou hífen</small>
+                    <br>
+                    <label for="image">Upload de foto</label>
+                    <input type="file" name="userImage" id="image" accept="image/*" aria-describedby="imageHelp">
+                    <small id="imageHelp">Envie uma foto no formato PNG ou JPEG</small>
+                    <br>
+                </fieldset>
+
+                <fieldset>
+                    <!-- PERFIL -->
+                    <legend>Perfil</legend>
+
+                    <p>Gênero: </p>
+                    <input type="radio" name="userGender" id="fem" value="Feminino">
+                    <label for="fem">Feminino</label>
+                    <input type="radio" name="userGender" id="masc" value="Masculino">
+                    <label for="masc">Masculino</label>
+                    <input type="radio" name="userGender" id="notInformed" value="Prefiro não informar">
+                    <label for="notInformed">Prefiro não informar</label>
+
+                    <br>
+                    <br>
+                    <label for="maritalStatus">Estado civil: </label>
+                    <select name="userMaritalStatus" id="maritalStatus" required>
+                        <option value=""selected disabled>Selecione...</option>
+                        <option value="casado">Casado</option>
+                        <option value="solteiro">Solteiro</option>
+                        <option value="divorciado">Divorciado</option>
+                        <option value="estavel">União estável</option>
+                        <option value="amigo">Amigo da Júlia</option>
+                    </select required>
+
+                    <br>
+                    <label for="state">Selecione o estado</label>
+                    <select name="userState" id="state" required>
+                            <option value=""selected disabled>Selecione...</option>
+                            <option value="AC">Acre</option>
+                            <option value="AL">Alagoas</option>
+                            <option value="AP">Amapá</option>
+                            <option value="AM">Amazonas</option>
+                            <option value="BA">Bahia</option>
+                            <option value="CE">Ceará</option>
+                            <option value="DF">Distrito Federal</option>
+                            <option value="ES">Espírito Santo</option>
+                            <option value="GO">Goiás</option>
+                            <option value="MA">Maranhão</option>
+                            <option value="MS">Mato Grosso do Sul</option>
+                            <option value="MT">Mato Grosso</option>
+                            <option value="MG">Minas Gerais</option>
+                            <option value="PA">Pará</option>
+                            <option value="PB">Paraíba</option>
+                            <option value="PR">Paraná</option>
+                            <option value="PE">Pernambuco</option>
+                            <option value="PI">Piauí</option>
+                            <option value="RJ">Rio de Janeiro</option>
+                            <option value="RN">Rio Grande do Norte</option>
+                            <option value="RS">Rio Grande do Sul</option>
+                            <option value="RO">Rondônia</option>
+                            <option value="RR">Roraima</option>
+                            <option value="SC">Santa Catarina</option>
+                            <option value="SP">São Paulo</option>
+                            <option value="SE">Sergipe</option>
+                            <option value="TO">Tocantins</option>
+                    </select>
+
+                    <br>
+                    <label for="city">Cidade</label>
+                    <input type="text" name="userCity" id="city" autocomplete="address-level2" placeholder="Ex.: Fortaleza" required>
+
+                    <br>
+                    <p>Nível de experiência com rolês: </p>
+                    <input type="radio" name="userExperience" id="ini" value="Iniciante">
+                    <label for="ini">Iniciante</label>
+                    <input type="radio" name="userExperience" id="inter" value="Intermediário">
+                    <label for="inter">Intermediário</label>
+                    <input type="radio" name="userExperience" id="avan" value="Avançado">
+                    <label for="avan">Avançado</label>
+                    <input type="radio" name="userExperience" id="ze" value="Zé ruela">
+                    <label for="ze">Zé ruela</label>
+
+                    <br>
+                    <br>
+                    <label for="passeio">Selecione seu tipo de passeio preferido </label>
+                    <select name="userPasseio" id="passeio" required>
+                        <option value=""selected disabled>Selecione...</option>
+                        <option value="natureza">Natureza</option>
+                        <option value="cinema">Cinema</option>
+                        <option value="restaurante">Restaurante</option>
+                        <option value="museu/exposicao">Museu/Exposição</option>
+                        <option value="bar">Bar</option>
+                        <option value="cafe">Café</option>
+                        <option value="casa">Ficar em casa</option>
+                        <option value="random">Passeio aleatório</option>
+                    </select>
+                </fieldset>
+
+                <fieldset>
+                    <!-- HÁBITOS -->
+                    <legend>Hábitos</legend>
+
+                    <p>Redes sociais: </p>
+                    <input id="instagram" type="checkbox" name="social" value="Instagram">
+                    <label for="instagram">Instagram</label>
+                    <br>
+                    <input id="facebook" type="checkbox" name="social" value="Facebook">
+                    <label for="facebook">Facebook</label>
+                    <br>
+                    <input id="linkdin" type="checkbox" name="social" value="Linkdin">
+                    <label for="linkdin">Linkdin</label>
+                    <br>
+                    <input id="X" type="checkbox" name="social" value="X (antigo Twitter)">
+                    <label for="X">X (antigo Twitter)</label>
+                    
+                    <br>                       
+                    <p>Frequência de rolês: </p>
+                    <input type="radio" name="userFrequencia" id="freq" value="Frequentemente">
+                    <label for="freq">Frequentemente</label>
+                    <input type="radio" name="userFrequencia" id="vez" value="Às vezes">
+                    <label for="vez">Às vezes</label>
+                    <input type="radio" name="userFrequencia" id="rar" value="Raramente">
+                    <label for="rar">Raramente</label>
+                    <input type="radio" name="userFrequencia" id="ava" value="Estou sendo avaliado neste momento?">
+                    <label for="ava">Estou sendo avaliado neste momento?</label>
+
+                    <br>
+                    <br>
+                    <label for="musicStyle">Estilo musical: </label>
+                    <input list="styleTypes" type="text" name="userMusicStyle" id="musicStyle">
+                    <datalist id="styleTypes">
+                        <option value="rock"></option>
+                        <option value="pop"></option>
+                        <option value="samba"></option>
+                        <option value="sertanejo"></option>
+                        <option value="gospel"></option>
+                    </datalist>
+
+                    <br>
+                    <label for="favoriteColor">Cor favorita: </label>
+                    <input type="color" name="userFavoriteColor" id="favoriteColor">
+
+                    <br>
+                    <p>Horário do próximo rolê: </p>
+                    <input type="radio" name="userHour" id="man" value="Manhã">
+                    <label for="man">Manhã</label>
+                    <input type="radio" name="userHour" id="tar" value="Tarde">
+                    <label for="tar">Tarde</label>
+                    <input type="radio" name="userHour" id="noi" value="Noite">
+                    <label for="noi">Noite</label>
+                    <input type="radio" name="userHour" id="julia" value="Quando a Júlia quiser">
+                    <label for="julia">Quando a Júlia quiser</label>
+                </fieldset>
+
+                <fieldset>
+                    <!-- PLANEJAMENTO DE ATIVIDADE -->
+                    <legend>Planejamento de Atividade</legend>
+
+                    <p>Onde você pretende levar a Júlia? </p>
+                    <label for="local">Local</label>
+                    <select name="userLocal" id="local" required>
+                        <option value=""selected disabled>Selecione...</option>
+                        <option value="restaurante">Restaurante</option>
+                        <option value="cinema">Cinema</option>
+                        <option value="parque">Parque</option>
+                        <option value="museu">Museu</option>
+                        <option value="cafe">Café</option>
+                        <option value="cachoeira">Cachoeira</option>
+                        <option value="outro">Outro</option>
+                    </select>
+
+                    <br>
+                    <label for="localEspecific">Informe o local exato </label>
+                    <input type="text" name="userLocalEspecific" id="localEspecific" required>
+
+                    <br>
+                    <label for="hourPrev">Horário previsto </label>
+                    <input type="time" name="userHourPrev" id="hourPrev" required>
+                </fieldset>
+
+                <fieldset>
+                    <!-- COMENTÁRIOS E OPINIÃO -->
+                    <legend>Comentários e Opinião</legend>
+
+                    <label for="choiceLocal">Qual o motivo da escolha do local? </label>
+                    <select name="userChoiceLocal" id="choiceLocal" required>
+                        <option value=""selected disabled>Selecione...</option>
+                        <option value="legal">Parece legal</option>
+                        <option value="julia">Porque a Julia gosta</option>
+                        <option value="tomas">Porque eu gosto</option>
+                        <option value="barato">Estava barato</option>
+                        <option value="pressionado">Fui pressionado</option>
+                    </select required>
+
+                    <br>
+                    <label for="mensagem">Justifique sua escolha de rolê: </label>
+                    <textarea name="userMensagem" id="mensagem" placeholder="Explique por que este local foi considerado digno de receber a presença da Júlia." required></textarea>
+                </fieldset>
+
+                <fieldset>
+                    <!-- CONFIRMAÇÕES -->
+                    <legend>Confirmações</legend>
+                    <input type="checkbox" name="userObg" id="obg" value="aceepted" required>
+                    <label for="obg">Eu confirmo que pretendo levar a Júlia para algum lugar</label>
+                    <br>
+                    <input type="checkbox" name="userLgpd" id="lgpd" value="aceepted" required>
+                    <label for="lgpd">Eu aceito participar da pesquisa</label>
+                    <br>
+                    <input type="checkbox" name="userTrue" id="true" value="aceepted" required>
+                    <label for="true">
+                        <span>Declaro que as informações fornecidas são verdadeiras e que, caso tenha informado um local, existe a possibilidade real de eu levar a Julia</span>
+                    </label>
+                </fieldset>
+
+                <button type="submit" aria-label="Enviar dados do planejamento">Enviar planejamento</button>
+                <button type="reset" aria-label="Limpar dados do planejamento">Limpar planejamento</button>
+            </form> 
+        </section>
+    </main>
+
+</body>
+</html>

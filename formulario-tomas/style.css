@@ -1,0 +1,171 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #f9f5f5;
+    font-family: "Work Sans", sans-serif;
+    color: #333333;
+    line-height: 1.5;
+}
+
+main {
+    width: 100%;
+    max-width: 800px;
+    margin: 40px auto;
+}
+
+header, 
+article {
+    text-align: center;
+    margin-bottom: 25px;
+}
+
+img {
+    width: 100px;
+}
+
+h1 {
+    font-family: "Fjalla One", sans-serif;
+    font-size: 32px;
+    margin-top: 10px;
+}
+
+h2 {
+    font-family: "Fjalla Onw", sans-serif;
+    font-size: 20px;
+    margin-bottom: 20px;
+}
+
+form {
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 12px;
+    margin-bottom: 100px;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.08);
+}
+
+fieldset {
+    padding: 20px;
+    border: 1px solid #dddddd;
+    border-radius: 10px;
+    margin-bottom: 18px;
+}
+
+legend {
+    font-family: "Fjalla One", sans-serif;
+    font-size: 19px;
+    padding: 0 8px;
+}
+
+p {
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+label {
+    display: inline-block;
+    margin-bottom: 8px;
+}
+
+label span {
+    display: inline-block;
+    max-width: 680px;
+    vertical-align: top;
+}
+
+input,
+select,
+textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 18px;
+    border: 1px solid #cccccc;
+    border-radius: 8px;
+    font-family: "Work Sans", sans-serif;
+    font-size: 14px;
+    background-color: #ffffff;
+}
+
+textarea {
+    min-height: 100px;
+    resize: vertical;
+}
+
+/* Radio e checkbox */
+input[type="radio"],
+input[type="checkbox"] {
+    width: auto;
+    margin-right: 5px;
+    margin-bottom: 12px;
+}
+
+/* Seletor de cor */
+input[type="color"] {
+    width: 45px;
+    height: 35px;
+    padding: 2px;
+}
+
+/* Textos auxiliares */
+small {
+    display: block;
+    margin-top: -10px;
+    margin-bottom: 18px;
+    font-size: 12px;
+    color: #666666;
+}
+
+/* Foco */
+input:focus,
+select:focus,
+textarea:focus {
+    outline: 2px solid #d98b9b;
+    outline-offset: 2px;
+}
+
+/* Inválido */
+input:user-invalid,
+select:user-invalid,
+textarea:user-invalid {
+    border-color: #c94c5c;
+}
+
+/* Válido */
+input:user-valid,
+select:user-valid,
+textarea:user-valid {
+    border-color: #6d9b76;
+}
+
+/* Botões */
+button {
+    padding: 10px 15px;
+    margin-right: 8px;
+    border: 1px solid #cccccc;
+    border-radius: 8px;
+    background-color: #ffffff;
+    font-family: "Work Sans", sans-serif;
+    cursor: pointer;
+}
+
+button[type="submit"]:hover {
+    background-color: #d98b9b;
+    color: #ffffff;
+}
+
+button[type="reset"]:hover {
+    background-color: #eeeeee;
+}
+
+/* Link  */
+a {
+    color: #d98b9b;
+}
+
+a:focus-visible {
+    outline: 2px solid #d98b9b;
+    outline-offset: 2px;
+}
